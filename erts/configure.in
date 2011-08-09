@@ -3440,7 +3440,7 @@ case $host_os in
 	linux*)
 		DED_LD="$CC"
 		DED_LD_FLAG_RUNTIME_LIBRARY_PATH="$CFLAG_RUNTIME_LIBRARY_PATH"
-		DED_LDFLAGS="-shared -Wl,-Bsymbolic"
+		DED_LDFLAGS="$LDFLAGS -shared -Wl,-Bsymbolic"
 		if test X${enable_m64_build} = Xyes; then
 			DED_LDFLAGS="-m64 $DED_LDFLAGS"
 		fi;
